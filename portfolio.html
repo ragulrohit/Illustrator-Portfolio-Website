@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary Meta -->
+  <title>Portfolio — Stackly Illustration Studio</title>
+  <meta name="description" content="Selected work from Stackly — character design, vector art, branding, children's books, NFT art, game art and product illustrations built for clients across industries." />
+  <meta name="author" content="Stackly" />
+  <meta name="theme-color" content="#06030f" />
+
+  <!-- Favicon (inline) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237C3AED'/%3E%3Cstop offset='.5' stop-color='%23EC4899'/%3E%3Cstop offset='1' stop-color='%23FACC15'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- ======= Preloader ======= -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <img src="images/Stackly_logo.png" alt="Stackly" class="loader-logo" />
+      <div class="loader-bar"><span id="loader-bar"></span></div>
+      <span id="loader-percent" class="loader-percent">0%</span>
+    </div>
+  </div>
+
+  <!-- ======= Custom Cursor ======= -->
+  <div id="cursor" aria-hidden="true"></div>
+  <div id="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ======= Scroll Progress ======= -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ======= Back to top ======= -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg>
+  </button>
+
+  <!-- ======= Animated Background ======= -->
+  <div id="bg" aria-hidden="true">
+    <div class="mesh"></div>
+    <div class="aurora a"></div>
+    <div class="aurora b"></div>
+    <div class="blobs">
+      <div class="blob b1"></div>
+      <div class="blob b2"></div>
+      <div class="blob b3"></div>
+      <div class="blob b4"></div>
+      <div class="blob b5"></div>
+    </div>
+    <div class="stars" id="stars"></div>
+    <div class="grid"></div>
+    <div class="particles" id="particles"></div>
+  </div>
+
+  <!-- ======= Navbar ======= -->
+  <header id="navbar">
+    <nav class="nav container">
+      <a href="index.html" class="nav-logo" aria-label="Stackly home">
+        <img src="images/Stackly_logo.png" alt="Stackly logo" />
+      </a>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a class="nav-link" href="index.html" data-page="index.html">Home</a></li>
+        <li><a class="nav-link" href="about.html" data-page="about.html">About</a></li>
+        <li><a class="nav-link" href="services.html" data-page="services.html">Services</a></li>
+        <li><a class="nav-link" href="portfolio.html" data-page="portfolio.html">Portfolio</a></li>
+        <li><a class="nav-link" href="contact.html" data-page="contact.html">Contact</a></li>
+        <li><a class="btn btn-grad btn-sm nav-cta" href="signin.html" data-magnetic>Sign In</a></li>
+      </ul>
+
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ======= Page Hero ======= -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="sec-tag reveal" data-reveal>Portfolio</span>
+        <h1 class="sec-title reveal" data-reveal data-delay="100">Selected <span class="grad-text">Work</span></h1>
+        <p class="sec-sub reveal" data-reveal data-delay="200">A glimpse into the colorful worlds we've built for clients across industries.</p>
+      </div>
+    </section>
+
+    <!-- ======= Featured Project ======= -->
+    <section class="section featured-proj">
+      <div class="container featured-proj-box glass reveal" data-reveal>
+        <div class="featured-proj-media" aria-hidden="true">
+          <img src="images/neon-guardian.webp" alt="Neon Guardian featured project artwork" />
+        </div>
+        <div class="featured-proj-copy">
+          <span class="sec-tag">Featured Project</span>
+          <h2>Neon Guardian</h2>
+          <p>We designed the hero character for an indie game studio — a neon-soaked guardian with a personality players instantly root for. Full turnaround sheets, expressions and in-game pose sets included.</p>
+          <a href="#portfolio" class="btn btn-grad" data-magnetic>Explore More Work</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Portfolio ======= -->
+    <section id="portfolio" class="section">
+      <div class="container">
+        <div class="pf-filters reveal" data-reveal data-delay="100" id="pf-filters"></div>
+
+        <div class="pf-grid" id="pf-grid"></div>
+      </div>
+    </section>
+
+    <!-- ======= CTA ======= -->
+    <section class="section cta-section">
+      <div class="container cta-box glass reveal" data-reveal>
+        <span class="sec-tag">Let's Work Together</span>
+        <h2 class="cta-title">Like what you <span class="grad-text">see?</span></h2>
+        <p class="cta-sub">Tell us about your project — we'll reply within 24 hours with ideas and a quote.</p>
+        <a href="contact.html" class="btn btn-grad btn-lg" data-magnetic>Start Your Project</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-glow" aria-hidden="true"></div>
+
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="images/Stackly_logo.png" alt="Stackly" class="footer-logo" />
+        <p>Premium illustration and creative design for brands that want to stand out.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Behance">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.6 11.1c.7-.3 1.3-1 1.3-2.1 0-2.4-1.8-3-4.2-3H1v12h4.9c2.5 0 4.7-1.1 4.7-3.9 0-1.5-.7-2.7-2-3zM3.9 7.6h1.6c1 0 1.9.3 1.9 1.5 0 1.2-.8 1.5-1.9 1.5H3.9V7.6zm1.9 8.7H3.9v-3.4h1.9c1.4 0 2.3.5 2.3 1.8 0 1.3-.9 1.6-2.3 1.6zM21 13.6c0-3-1.7-5.4-4.7-5.4s-5 2.3-5 5.4c0 3.2 2.2 5.4 5.2 5.4 2.2 0 3.9-1.1 4.5-3h-2.4c-.4.8-1.2 1.2-2.1 1.2-1.5 0-2.4-.9-2.5-2.6h7zm-7.1-1.6c.1-1.2.8-2.2 2.4-2.2 1.4 0 2.2.9 2.3 2.2h-4.7zM19 7.6h4v1.3h-4z"/></svg>
+          </a>
+          <a href="#" aria-label="Dribbble">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm6.6 4.6a8.5 8.5 0 0 1 1.9 5.3c-.3 0-3-.1-5.7-.4.1-.3.2-.6.4-1a36 36 0 0 0 3.4-3.9zM12 3.5c2.2 0 4.2.8 5.7 2.1-.3.4-2.8 3-3.6 4.1a47 47 0 0 0-4.6-.2c0-.2 0-.4 0-.6.2-3 1.3-5.4 2.5-5.4zM4.8 7.1c1.5-1.7 3.6-2.8 6-3a14 14 0 0 0-2.6 5.4 25 25 0 0 1-3.4.4 8.5 8.5 0 0 1 0-2.8zM3.5 12a8.5 8.5 0 0 1 .4-2.6c.5 0 2.8 0 4.4.2.1.4.2.9.3 1.3-3 .9-4.3 1.4-5 1.1zM12 20.5a8.4 8.4 0 0 1-5.2-1.8c.3-.5 1.4-1.7 4.3-2.6.8 2.2 1.1 4.1 1.1 4.4h-.2zm2.3-.3c0-.3-.3-2.2-1-4.2 1.3 0 2.5 0 3.3.1a8.5 8.5 0 0 1-2.3 4.1zm4.5-5c-1-.2-2.2-.3-3.3-.4a28 28 0 0 0-1.4-3.4c2.7-.6 4.6-.6 5-.6 0 1.5-.2 3-.3 4.4z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.9.2 2.3.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1.1.4 2.3.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.9-.4 2.3a3.9 3.9 0 0 1-2.3 2.3c-.4.2-1.1.4-2.3.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.9-.2-2.3-.4a3.9 3.9 0 0 1-2.3-2.3c-.2-.4-.4-1.1-.4-2.3C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.9.4-2.3.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1.1-.4 2.3-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.9.4-1.2.8-.4.4-.6.7-.8 1.2-.1.4-.3 1-.4 2.1-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1.1.2 1.7.4 2.1.2.5.4.9.8 1.2.4.4.7.6 1.2.8.4.1 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.9-.4 1.2-.8.4-.4.6-.7.8-1.2.1-.4.3-1 .4-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.9-.8-1.2-.4-.4-.7-.6-1.2-.8-.4-.1-1-.3-2.1-.4-1.2-.1-1.6-.1-4.7-.1zm0 3.1a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8zm0 8.1a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4zm6.2-8.3a1.1 1.1 0 1 1-2.3 0 1.1 1.1 0 0 1 2.3 0z"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.49 2.49 0 1 1 0 3.5a2.49 2.49 0 0 1 4.98 0zM.24 8.6h4.5V23H.24V8.6zM8.2 8.6h4.3v2h.1c.6-1.1 2-2.3 4.2-2.3 4.5 0 5.3 2.9 5.3 6.7V23h-4.5v-7c0-1.7 0-3.8-2.3-3.8s-2.7 1.8-2.7 3.7V23H8.2V8.6z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="services.html">Custom Illustration</a>
+        <a href="services.html">Character Design</a>
+        <a href="services.html">Book Illustration</a>
+        <a href="services.html">Motion Graphics</a>
+        <a href="services.html">3D Illustration</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:hello@stackly.design">hello@stackly.design</a>
+        <a href="tel:+15550142020">+1 (555) 014-2020</a>
+        <p class="footer-addr">Creativity District,<br/>Brooklyn, NY</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom container">
+      <p>&copy; <span id="year">2026</span> Stackly Studio. All rights reserved.</p>
+      <p>Made with <span class="grad-text">color</span> &amp; coffee &#9749;</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+  <script src="js/links.js" defer></script>
+</body>
+</html>

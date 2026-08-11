@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080415" />
+  <title>Page Not Found — Stackly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/error.css" />
+</head>
+<body>
+  <main class="error-page">
+    <div class="error-orb orb-one"></div>
+    <div class="error-orb orb-two"></div>
+    <section class="error-content" aria-labelledby="error-title">
+      <a href="index.html" class="error-logo"><img src="images/Stackly_logo.png" alt="Stackly" /></a>
+      <div class="error-art" aria-hidden="true">
+        <span>4</span><div class="planet"><i></i></div><span>4</span>
+      </div>
+      <p class="error-tag">LOST IN THE CREATIVE COSMOS</p>
+      <h1 id="error-title">This page took a<br><em>different direction.</em></h1>
+      <p class="error-copy">The page you’re looking for has moved, disappeared, or never existed. Let’s get you back to creating.</p>
+      <div class="error-actions">
+        <button type="button" class="go-back" id="go-back">← Go Back</button>
+        <a href="index.html" class="back-home">Back to Home <span>→</span></a>
+      </div>
+    </section>
+  </main>
+  <script>
+    document.querySelector('#go-back').addEventListener('click', () => {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = 'index.html';
+    });
+  </script>
+  <style>
+    .error-logo { display: inline-block; position: static; margin: 0 auto 30px; }
+    @media (max-width: 520px) { .error-logo { margin-bottom: 24px; } }
+  </style>
+</body>
+</html>
