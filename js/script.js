@@ -639,6 +639,14 @@
         }
       });
     });
+
+    // Do not keep an open menu attached to a moving form while the page scrolls.
+    window.addEventListener('scroll', () => {
+      $$('.custom-form-select-menu.open').forEach((menu) => {
+        menu.classList.remove('open');
+        menu.closest('.custom-form-select')?.querySelector('.custom-form-select-trigger')?.setAttribute('aria-expanded', 'false');
+      });
+    }, { passive: true });
   }
 
   /* ============================================================

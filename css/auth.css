@@ -25,9 +25,9 @@ button { cursor:pointer; }
 .board-tag { position:absolute; left:23px; bottom:25px; color:#16d9fb; font-size:.62rem; letter-spacing:.08em; font-weight:700; }
 .showcase-orb { position:absolute; z-index:-1; border-radius:50%; filter:blur(4px); }.orb-one { width:240px;height:240px;right:-55px;top:-70px;background:rgba(21,166,229,.28); }.orb-two { width:170px;height:170px;left:-75px;bottom:40px;background:rgba(119,54,224,.18); }
 .spark { position:absolute; color:#26dffd; text-shadow:0 0 15px #1acdf0; font-size:1.7rem; }.spark-one{top:42%;right:20%;}.spark-two{bottom:25%;left:14%;font-size:1rem;}
-.auth-panel { display:grid; align-items:center; padding:42px clamp(30px,6vw,72px); background:linear-gradient(155deg,#1b1b2a,#161622); }.auth-panel-inner { width:min(100%,420px); margin:auto; }.auth-logo { width:130px; height:auto; margin:0 auto 26px; filter:brightness(0) invert(1); }
+.auth-panel { display:grid; place-items:center; padding:42px clamp(30px,6vw,72px); background:linear-gradient(155deg,#1b1b2a,#161622); }.auth-panel-inner { width:min(100%,420px); margin:auto; }.auth-logo { display:block; width:130px; height:auto; margin:0 auto 26px; filter:brightness(0) invert(1); }
 .auth-panel h2 { margin:0; font-family:"Space Grotesk",sans-serif; font-size:2.2rem; text-align:center; letter-spacing:-.05em; }.auth-intro { color:var(--muted); margin:8px 0 30px; text-align:center; }
-.auth-message { display:none; margin:-12px 0 20px; padding:11px 13px; border:1px solid rgba(255,105,145,.42); border-radius:10px; background:rgba(255,70,120,.1); color:#ffb7c9; font-size:.78rem; line-height:1.45; }
+.auth-message { display:none; margin:-12px 0 20px; padding:11px 13px; border:1px solid rgba(255,105,145,.42); border-radius:10px; background:rgba(255,70,120,.1); color:#ffb7c9; font-size:.78rem; line-height:1.45; text-align:center; }.auth-message.success { border-color:rgba(54,219,146,.48); background:rgba(54,219,146,.1); color:#9af4c8; }
 .auth-message.show { display:block; }
 form label { display:block; margin:0 0 9px; color:#e5e5ee; font-size:.84rem; font-weight:600; } input[type="text"],input[type="email"],input[type="password"],select { width:100%; height:54px; padding:0 16px; color:white; outline:0; border:1px solid var(--line); border-radius:11px; background:#242430; transition:border-color .2s,box-shadow .2s; } input[type="password"] { letter-spacing:.32em; }
 input::placeholder { color:#787887; } select:invalid { color:#787887; } select option { color:#f8f8fc; background:#242430; } input:focus,select:focus { border-color:#13cceb; box-shadow:0 0 0 3px rgba(19,204,235,.12); }
@@ -50,7 +50,7 @@ input::placeholder { color:#787887; } select:invalid { color:#787887; } select o
 .custom-select { position:relative; width:100%; }
 .native-select { position:absolute; width:1px; height:1px; opacity:0; pointer-events:none; }
 .custom-select-button { width:100%; height:54px; padding:0 16px; border:1px solid var(--line); border-radius:11px; color:#787887; background:#242430; text-align:left; cursor:pointer; }
-.custom-select-button::after { content:'⌄'; float:right; color:#aaaabd; font-size:1.1rem; }
+.custom-select-button::after { content:'▾'; float:right; color:#22d7f7; font-size:1rem; line-height:1; }
 .custom-select-button:hover,
 .custom-select-button:focus-visible { border-color:var(--blue); background:rgba(37,141,245,.15); color:#fff; outline:0; }
 .custom-select-button.selected { border-color:var(--blue); background:rgba(37,141,245,.18); color:#fff; }

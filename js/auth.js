@@ -8,8 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!password || !toggles.length || !form) return;
 
-  const showMessage = (text) => {
+  const showMessage = (text, success = false) => {
     message.textContent = text;
+    message.classList.toggle('success', success);
     message.classList.add('show');
   };
 
@@ -105,7 +106,8 @@ document.addEventListener('DOMContentLoaded', () => {
         password: password.value
       };
       localStorage.setItem('stacklyAccount', JSON.stringify(account));
-      window.location.href = 'signin.html';
+      showMessage('Account created successfully! Redirecting to sign in…', true);
+      setTimeout(() => { window.location.href = 'signin.html'; }, 900);
       return;
     }
 
@@ -121,6 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
     sessionStorage.setItem('stacklyUserEmail', email);
     sessionStorage.setItem('stacklyUserName', name || 'Creative');
     sessionStorage.setItem('stacklyUserRole', role);
-    window.location.href = 'dashboard.html';
+    showMessage('Login successful! Opening your dashboard…', true);
+    setTimeout(() => { window.location.href = 'dashboard.html'; }, 700);
   });
 });
