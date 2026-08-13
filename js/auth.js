@@ -5,13 +5,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const googleButton = document.querySelector('.google-button');
   const logo = document.querySelector('.auth-logo');
   const message = document.querySelector('#auth-message');
+  let messageTimeout;
 
   if (!password || !toggles.length || !form) return;
 
   const showMessage = (text, success = false) => {
+    clearTimeout(messageTimeout);
     message.textContent = text;
     message.classList.toggle('success', success);
     message.classList.add('show');
+    if (success) {
+      messageTimeout = setTimeout(() => message.classList.remove('show'), 2500);
+    }
   };
 
   document.querySelectorAll('select#role').forEach((select) => {
@@ -107,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
       };
       localStorage.setItem('stacklyAccount', JSON.stringify(account));
       showMessage('Account created successfully! Redirecting to sign in…', true);
-      setTimeout(() => { window.location.href = 'signin.html'; }, 900);
+      setTimeout(() => { window.location.href = 'signin.html'; }, 2500);
       return;
     }
 
@@ -124,6 +129,6 @@ document.addEventListener('DOMContentLoaded', () => {
     sessionStorage.setItem('stacklyUserName', name || 'Creative');
     sessionStorage.setItem('stacklyUserRole', role);
     showMessage('Login successful! Opening your dashboard…', true);
-    setTimeout(() => { window.location.href = 'dashboard.html'; }, 700);
+    setTimeout(() => { window.location.href = 'dashboard.html'; }, 2500);
   });
 });
